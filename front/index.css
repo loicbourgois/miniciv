@@ -1,0 +1,47 @@
+* {
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    border: none;
+    background: #fff0;
+}
+body {
+    background: #111;
+    display: flex;
+  height: 100vh;
+  width: 100vw;
+  flex-direction: column;
+}
+canvas {
+  image-rendering: crisp-edges;
+  image-rendering: pixelated;
+}
+#settings {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 20vw;
+  height: 50vh;
+}
+#settings > textarea {
+  flex-grow: 1;
+}
+textarea {
+  padding: 0.2rem;
+  background: #fffa;
+}
+button {
+  padding: 0.2rem;
+  background: #ddd;
+}
+#stats {
+  position: absolute;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  width: 20vw;
+  height: 50vh;
+}
+#stats > textarea {
+  flex-grow: 1;
+}
