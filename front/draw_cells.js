@@ -1,4 +1,7 @@
 import { get_cell } from "./get_cell.js";
+const draw_cell = (view, cell, color) => {
+	view.draw_disk(cell.ap.x, cell.ap.y, cell.diameter, color);
+};
 const draw_cells = (miniciv, world, memory, view) => {
 	const cells_ptr = world.cells();
 	const cell_size = miniciv.Cell.size();
@@ -11,8 +14,8 @@ const draw_cells = (miniciv, world, memory, view) => {
 	for (let i = 0; i < world.cells_count(); i++) {
 		const cell = get_cell(cells_view, cell_size, i);
 		avg_diameter += cell.diameter;
-		view.draw_disk(cell.ap.x, cell.ap.y, cell.diameter, "#a80");
+		draw_cell(view, cell, "#a80");
 	}
 	avg_diameter /= world.cells_count();
 };
-export { draw_cells };
+export { draw_cells, draw_cell };
